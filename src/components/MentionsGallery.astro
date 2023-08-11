@@ -1,0 +1,16 @@
+---
+
+import Grid from "./Grid.astro";
+
+---
+<div class="gallery">
+    <Grid variant="small">
+      {
+        ['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+                <li class="mention-card">
+                    <p>{brand}</p>
+                </li>
+        ))
+      }
+    </Grid>
+</div>
