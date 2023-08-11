@@ -1,10 +1,10 @@
 ---
 import {getCollection} from 'astro:content';
 
-import Grid from "./Grid.astro";
-import PortfolioPreview from "./PortfolioPreview.astro";
-import CallToAction from "./CallToAction.astro";
-import Icon from "./Icon.astro";
+import Grid from "../dispositions/Grid.astro";
+import PortfolioPreview from "../dispositions/PortfolioPreview.astro";
+import CallToAction from "../elements/CallToAction.astro";
+import Icon from "../elements/Icon.astro";
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))

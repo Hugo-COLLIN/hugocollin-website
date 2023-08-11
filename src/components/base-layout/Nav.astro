@@ -1,8 +1,8 @@
 ---
-import Icon from './Icon.astro';
-import ThemeToggle from './ThemeToggle.astro';
-import type { iconPaths } from './IconPaths';
-import { personalInfo as me} from "../env.d.ts";
+import Icon from '../elements/Icon.astro';
+import ThemeToggle from '../elements/ThemeToggle.astro';
+import type { iconPaths } from '../elements/IconPaths';
+import { personalInfo as me} from "../../env.d.ts";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -26,7 +26,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title menu-button">
+		<a href="/public" class="site-title menu-button">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			Hugo COLLIN
 		</a>
