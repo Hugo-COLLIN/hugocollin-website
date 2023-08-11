@@ -1,16 +1,31 @@
 ---
+import Icon from 'astro-icon';
+// import Icon from './Icon.astro';
+
 let experienceData = [
   {
-    company: 'Entreprise 3',
-    position: 'Poste 3',
-    duration: '2020 - 2022',
-    description: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Maecenas hendrerit pharetra eros, eu viverra felis.', 'Praesent lobortis felis in nisi porttitor posuere. Nullam.']
+    company: 'LORIA',
+    position: 'Analyst-developer Intern',
+    duration: 'feb. - apr. 2023 (10 weeks)',
+    // description: ['TODO']
   },
   {
-    company: 'Entreprise 3',
-    position: 'Poste 3',
-    duration: '2020 - 2022',
-    description: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Maecenas hendrerit pharetra eros, eu viverra felis.', 'Praesent lobortis felis in nisi porttitor posuere. Nullam.']
+    company: 'Hug journal - Independant',
+    position: 'Blogger',
+    duration: '2013 - 2019',
+    // description: ['TODO']
+  },
+  {
+    company: 'Le Cnam en Grand Est',
+    position: 'Middle school internship',
+    duration: 'dec. 2017 (1 week)',
+    // description: ['TODO']
+  },
+  {
+    company: 'Maurice Barrès middle school',
+    position: 'Radio broadcaster',
+    duration: 'sept. 2017 - jun. 2018',
+    // description: ['TODO']
   },
   // More objects for other job experiences...
 ];
@@ -18,14 +33,16 @@ let experienceData = [
 ---
 
 <section id="experience" class="redback">
-    <header>
-      <h2>Experience</h2>
-    </header>
+    <!--<header>-->
+    <!--  <h2>Experience</h2>-->
+    <!--</header>-->
     <ul class="timeline container">
       {experienceData.map((experience, index) => {
         return (
                 <li>
-                    <div class="tl-badge"><span class="bi-briefcase-fill"></span></div>
+                    <div class="bg-circle"><span></span></div>
+                    <div class="tl-badge"><Icon pack="bi" name="briefcase-fill" size="1.33em" /></div>
+                    <!--<div class="tl-badge"><Icon icon="briefcase" size="1.33em" /></div>-->
                     <article class={`tl-panel-container-${index % 2 === 0 ? 'l' : 'r'}`}>
                         <section class="tl-panel">
                             <header class="tl-heading">
@@ -34,7 +51,7 @@ let experienceData = [
                                 <p class="text-muted"><span class="bi-clock-fill"></span> {experience.duration}</p>
                             </header>
                             <div class="tl-body">
-                              {experience.description.map(paragraph => <p>{paragraph}</p>)}
+                              {experience.description?.map(paragraph => <p>{paragraph}</p>)}
                             </div>
                         </section>
                     </article>
@@ -57,7 +74,8 @@ let experienceData = [
 }
 
 .timeline:before,
-.tl-badge
+.tl-badge,
+.bg-circle
 {
     position: absolute;
     left: 50%;
@@ -89,15 +107,30 @@ let experienceData = [
     clear:both;
 }
 
-.tl-badge {
+.tl-badge,
+.bg-circle
+{
     width:50px;
     line-height: 50px;
     font-size:20px;
     text-align:center;
     top:16px;
     margin-left:-25px;
+}
+
+.tl-badge
+{
+    margin-top:6px;
+}
+
+.bg-circle
+{
     background-color: #ddd;
     border-radius:50%;
+}
+
+.bg-circle > span {
+    padding: 2em;
 }
 
 .tl-panel-container-l {

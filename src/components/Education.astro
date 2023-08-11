@@ -1,0 +1,84 @@
+---
+
+const cards = [
+  {
+    "year": "2021 - 2024",
+    "school": "IUT Nancy-Charlemagne",
+    "degree": "IT Bachelor's Degree - Software Engineering",
+    // "skills": [
+    //   "Compétence 1",
+    //   "Compétence 2"
+    // ]
+  },
+  {
+      "year": "2018 - 2021",
+      "school": "Lycée Pierre Mendès France - Epinal",
+      "degree": "General Baccalaureate - Mathematics, Engineering, Computer Science",
+      // "skills": [
+      //     "Compétence 1",
+      //     "Compétence 2"
+      // ]
+  },
+]
+---
+<section id="education" class="whiteback">
+    <!--<header>-->
+    <!--    <h2>Education</h2>-->
+    <!--</header>-->
+    <article class="container">
+        <div class="row">
+          {cards.map((degree, index) => {
+            return (
+              <div class="col-md-6">
+                <article class="educ-bloc">
+                  <h5>{degree.year}</h5>
+                  <span class="bi-award-fill"></span>
+                  <h3>{degree.school}</h3>
+                  <h4>{degree.degree}</h4>
+                  {degree.skills?.length > 0 && <hr>}
+                  {degree.skills?.map((skill, index) => {
+                    return (
+                      <p>{skill}</p>
+                    )
+                  })}
+                </article>
+              </div>
+            )
+          })}
+        </div>
+    </article>
+</section>
+
+<style>
+    .educ-bloc
+    {
+        width:90%;
+        text-align:center;
+        padding:30px;
+        background:#e9ecef;
+        border-radius:5px;
+        border:1px solid #ccc;
+        margin: 0 auto 20px;
+    }
+
+    .educ-bloc h5 {
+        color: #888;
+        font-size:15px;
+        margin-bottom:15px;
+
+    }
+
+    .educ-bloc span {
+        font-size:35px;
+    }
+
+    .educ-bloc h3 {
+        color: #d82c2e;
+        margin: 15px 0;
+    }
+
+    .educ-bloc h4 {
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+</style>
