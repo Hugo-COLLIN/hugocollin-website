@@ -14,11 +14,14 @@ import Pill from '../components/Pill.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 import FeaturedWork from "../components/FeaturedWork.astro";
+
 import {personalInfo as me } from "../env.d.ts";
+import { Spa } from "astro-spa"
 
 ---
 
 <BaseLayout>
+  <Spa defaultAnimation={false} progressBar={false}/>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
