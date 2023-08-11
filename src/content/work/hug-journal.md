@@ -4,11 +4,11 @@ publishDate: 2013-01-01 00:00:00
 img: /assets/hj400.png
 img_alt: Hug Journal
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  My childhood blog, where I wrote about my passions.
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - Blogging
+  - HTML / CSS
+  - Newsletter
 ---
 
 ## De quoi s'agit-il ?

@@ -26,15 +26,13 @@ const cards = [
     <!--    <h2>Education</h2>-->
     <!--</header>-->
     <article class="container">
-        <div class="row">
           {cards.map((degree, index) => {
             return (
-              <div class="col-md-6">
                 <article class="educ-bloc">
-                  <h5>{degree.year}</h5>
+                  <h5>{degree.year ?? ''}</h5>
                   <span class="bi-award-fill"></span>
-                  <h3>{degree.school}</h3>
-                  <h4>{degree.degree}</h4>
+                  <h3>{degree.school ?? ''}</h3>
+                  <h4><small>{degree.degree ?? ''}</small></h4>
                   {degree.skills?.length > 0 && <hr>}
                   {degree.skills?.map((skill, index) => {
                     return (
@@ -42,23 +40,33 @@ const cards = [
                     )
                   })}
                 </article>
-              </div>
             )
           })}
-        </div>
     </article>
 </section>
 
 <style>
+    .container
+    {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .card {
+        flex: 50%;
+        padding: 0 10px;
+    }
+
     .educ-bloc
     {
         width:90%;
         text-align:center;
         padding:30px;
-        background:#e9ecef;
+        background: var(--accent-text-over);
         border-radius:5px;
         border:1px solid #ccc;
-        margin: 0 auto 20px;
+        margin: 0 10px;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.175);
     }
 
     .educ-bloc h5 {
@@ -73,12 +81,16 @@ const cards = [
     }
 
     .educ-bloc h3 {
-        color: #d82c2e;
+        color: var(--accent-regular);
         margin: 15px 0;
     }
 
     .educ-bloc h4 {
         margin-bottom: 20px;
         font-weight: normal;
+    }
+
+    html.theme-dark .educ-bloc h4 {
+        color: var(--gray-800)!important;
     }
 </style>

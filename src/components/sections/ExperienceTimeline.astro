@@ -7,7 +7,8 @@ let experienceData = [
     company: 'LORIA',
     position: 'Analyst-developer Intern',
     duration: 'feb. - apr. 2023 (10 weeks)',
-    // description: ['TODO']
+    description: ['I developed the interface of the GramEx web application, an educational tool to improve the teaching of French grammar.'],
+    link: '/work/gramex',
   },
   {
     company: 'Hug journal - Independant',
@@ -121,11 +122,12 @@ let experienceData = [
 .tl-badge
 {
     margin-top:6px;
+    color: #eee;
 }
 
 .bg-circle
 {
-    background-color: #ddd;
+    background-color: var(--accent-regular);
     border-radius:50%;
 }
 
@@ -152,7 +154,12 @@ let experienceData = [
     padding:20px 25px;
     position:relative;
     box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-    background:#fff;
+    background: var(--accent-text-over);
+}
+
+html.theme-dark .tl-panel *
+{
+    color: var(--gray-800)!important;
 }
 
 .tl-panel-container-r .tl-panel {
