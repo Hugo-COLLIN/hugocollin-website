@@ -14,10 +14,8 @@ import Pill from '../components/Pill.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 import FeaturedWork from "../components/FeaturedWork.astro";
-import ContactForm from "../components/ContactForm.astro";
+import {personalInfo as me } from "../env.d.ts";
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <BaseLayout>
@@ -25,7 +23,7 @@ import ContactForm from "../components/ContactForm.astro";
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Hugo COLLIN"
+					title={`Hello, I'm \n ${me.firstname} ${me.lastname}!`}
 					tagline="💻 I am a Creative Developer based in France, passionate by design, knowledge management and writing!"
 					align="start"
 				>
@@ -37,7 +35,7 @@ import ContactForm from "../components/ContactForm.astro";
 				</Hero>
 
 				<img
-					alt="Hugo COLLIN picture"
+					alt=`${me.firstname} ${me.lastname}`
 					src="/assets/pp.jpg"
 				/>
 			</header>
@@ -77,7 +75,6 @@ import ContactForm from "../components/ContactForm.astro";
 			<!--</section>-->
 		</main>
 
-    <ContactForm />
 		<ContactCTA />
 	</div>
 </BaseLayout>
@@ -113,6 +110,8 @@ import ContactForm from "../components/ContactForm.astro";
 		.roles {
 			margin-top: 0.5rem;
 			display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 			gap: 0.5rem;
 		}
 
