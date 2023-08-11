@@ -1,0 +1,183 @@
+---
+
+---
+<section id="experience" class="redback">
+    <header>
+        <h2>Expérience professionnelle</h2>
+    </header>
+    <ul class="timeline container">
+        <li>
+            <div class="tl-badge"><span class="bi-briefcase-fill"></span></div>
+            <article class="tl-panel-container-l">
+                <section class="tl-panel">
+                    <header class="tl-heading">
+                        <h3>Entreprise 3</h3>
+                        <h4>Poste 3</h4>
+                        <p class="text-muted"><span class="bi-clock-fill"></span> 2020 - 2022</p>
+                    </header>
+                    <div class="tl-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <p>
+                            Maecenas hendrerit pharetra eros, eu viverra felis.
+                        </p>
+                        <p>
+                            Praesent lobortis felis in nisi porttitor posuere. Nullam.
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </li>
+
+        <li>
+            <div class="tl-badge"><span class="bi-briefcase-fill"></span></div>
+            <article class="tl-panel-container-r">
+                <section class="tl-panel">
+                    <header class="tl-heading">
+                        <h3>Entreprise 2</h3>
+                        <h4>Poste 2</h4>
+                        <p class="text-muted"><span class="bi-clock-fill"></span> 2017 - 2020</p>
+                    </header>
+                    <div class="tl-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <p>
+                            Nam vestibulum elit felis, id ultricies quam tempor vitae. Vestibulum.
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </li>
+
+        <li>
+            <div class="tl-badge"><span class="bi-briefcase-fill"></span></div>
+            <article class="tl-panel-container-l">
+                <section class="tl-panel">
+                    <header class="tl-heading">
+                        <h3>Entreprise 1</h3>
+                        <h4>Poste 1</h4>
+                        <p class="text-muted"><span class="bi-clock-fill"></span> 2014 - 2017</p>
+                    </header>
+                    <div class="tl-body">
+                        <p>
+                            Nam vestibulum elit felis, id ultricies quam tempor vitae. Vestibulum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+
+                    </div>
+                </section>
+            </article>
+        </li>
+    </ul>
+</section>
+
+<style>
+#experience ul
+{
+    list-style: none;
+}
+
+.timeline {
+    padding: 30px 10px;
+    position: relative;
+}
+
+.timeline:before,
+.tl-badge
+{
+    position: absolute;
+    left: 50%;
+}
+
+.timeline:before {
+    content: " ";
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #333;
+    margin-left: -2.5px;
+}
+
+.timeline > li {
+    margin-bottom:20px;
+    position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after
+{
+    content:" ";
+    display:table;
+}
+
+.timeline > li:after
+{
+    clear:both;
+}
+
+.tl-badge {
+    width:50px;
+    line-height: 50px;
+    font-size:20px;
+    text-align:center;
+    top:16px;
+    margin-left:-25px;
+    background-color: #ddd;
+    border-radius:50%;
+}
+
+.tl-panel-container-l {
+    width: 50%;
+    float:left;
+}
+
+.tl-panel-container-r {
+    width: 50%;
+    float:right;
+}
+
+.tl-panel {
+    width: 90%;
+    float:right;
+    margin-right:40px;
+    border: 1px solid #d4d4d4;
+    border-radius:7px;
+    padding:20px 25px;
+    position:relative;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+    background:#fff;
+}
+
+.tl-panel-container-r .tl-panel {
+    float:left;
+    margin-left:40px;
+}
+
+.tl-panel:after {
+    content:" ";
+    position:absolute;
+    top:27px;
+    right: -14px;
+    display:inline-block;
+    border-top:14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right:0 solid #fff;
+    border-bottom: 14px solid transparent;
+}
+
+.tl-panel-container-r .tl-panel:after {
+    border-left-width:0;
+    border-right-width:14px;
+    left:-14px;
+    right:auto;
+}
+
+.tl-panel h3 {
+    text-transform: uppercase;
+    font-size : 1em;
+}
+</style>
