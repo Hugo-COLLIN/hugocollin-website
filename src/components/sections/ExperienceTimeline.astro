@@ -149,18 +149,18 @@ let experienceData = [
     width: 90%;
     float:right;
     margin-right:40px;
-    border: 1px solid #d4d4d4;
-    border-radius:7px;
-    padding:20px 25px;
     position:relative;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-    background: var(--accent-text-over);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
 }
 
-html.theme-dark .tl-panel *
-{
-    color: var(--gray-800)!important;
-}
+//html.theme-dark .tl-panel *
+//{
+//    color: var(--gray-800)!important;
+//}
 
 .tl-panel-container-r .tl-panel {
     float:left;
@@ -189,5 +189,16 @@ html.theme-dark .tl-panel *
 .tl-panel h3 {
     text-transform: uppercase;
     font-size : 1em;
+}
+
+@media (min-width: 50em) {
+    .box {
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+    }
+
+    .skills h2 {
+        font-size: var(--text-2xl);
+    }
 }
 </style>
