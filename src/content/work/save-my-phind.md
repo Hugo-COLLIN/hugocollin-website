@@ -6,7 +6,7 @@ img_alt: Save my Phind extension
 description: |
   🚀 A browser extension that allows you to export your Phind threads into markdown files.
 tags:
-  - API WebExtensions
+  - Browser Extension
   - JavaScript
   - Web Scraping
 
@@ -57,16 +57,3 @@ Developing "Save My Phind" is a rewarding experience.
 It not only allows me to put my skills to the test but also provide me with the opportunity to contribute to the Phind community.
 It addresses the need for offline access, sharing, and integration of newly AI generated content
 I'm really excited to see how users will benefit from this extension.
-
-
-___
-Save My Phind - AI Conversation Exporter is a useful tool for users who want to export their Phind.com search threads into markdown files.  like Obsidian. The development process involved overcoming challenges and acquiring new skills, ultimately resulting in a valuable and user-friendly extension.
-
-
-Challenges Faced:
-The journey of developing this extension was not without its challenges. 
-One of the main hurdles was to add export options directly inside the Phind interface. 
-However, with perseverance and a lot of coding, I was able to overcome this and now users can export all their threads by clicking on a simple button!
-
-
-
