@@ -19,6 +19,8 @@ import {personalInfo as me } from "../env.d.ts";
 import { Spa } from "astro-spa"
 import ExperienceTimeline from "../components/sections/ExperienceTimeline.astro";
 import MentionsGallery from "../components/sections/MentionsGallery.astro";
+import Degrees from "../components/sections/Education.astro";
+import Quotation from "../components/sections/Quotation.astro";
 
 ---
 
@@ -45,16 +47,45 @@ import MentionsGallery from "../components/sections/MentionsGallery.astro";
 				/>
 			</header>
 
-			<!--<Skills />-->
+			<Skills />
 		</div>
 
-		<main class="wrapper stack gap-20 lg:gap-48">
+		<main class="wrapper stack gap-20">
       <section class="section with-background with-cta">
         <header class="section-header stack gap-2 lg:gap-4">
             <h3>Selected Work</h3>
             <p>Take a look below at some of my featured work from the past few years:</p>
         </header>
 			  <FeaturedWork />
+      </section>
+
+      <!--<section class="section with-background bg-variant">-->
+      <section class="complex-section">
+          <header class="section-header">
+              <h3>Experience</h3>
+              <!--<p>Take a look below at some of my featured work from the past few years:</p>-->
+          </header>
+          <div class="content">
+              <ExperienceTimeline />
+          </div>
+      </section>
+      <section class="complex-section">
+          <header class="section-header">
+              <h3>Education</h3>
+              <!--<p>Take a look below at some of my featured work from the past few years:</p>-->
+          </header>
+          <div class="content">
+              <Degrees />
+          </div>
+      </section>
+      <section class="complex-section">
+          <header class="section-header">
+              <h3>Recommendations</h3>
+              <!--<p>Take a look below at some of my featured work from the past few years:</p>-->
+          </header>
+          <div class="content">
+             <Quotation />
+          </div>
       </section>
 
 			<!--<section class="section with-background bg-variant">-->
@@ -156,7 +187,7 @@ import MentionsGallery from "../components/sections/MentionsGallery.astro";
 
 	.section-header {
 		justify-self: center;
-		text-align: center;
+		//text-align: center;
 		max-width: 50ch;
 		font-size: var(--text-md);
 		color: var(--gray-300);
@@ -165,6 +196,11 @@ import MentionsGallery from "../components/sections/MentionsGallery.astro";
 	.section-header h3 {
 		font-size: var(--text-2xl);
 	}
+
+  .complex-section > header
+  {
+      margin-bottom: 2rem;
+  }
 
 	@media (min-width: 50em) {
 		.section {

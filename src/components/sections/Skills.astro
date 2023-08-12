@@ -1,23 +1,65 @@
 ---
 import Icon from '../elements/Icon.astro';
+
+const data = [
+  {
+    icon: 'terminal-window',
+    title: 'Web Developer',
+    // description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+    list: [
+      'Websites: Astro, VueJS 3',
+      'Deployments: OVHcloud', //Netlify, Vercel, GitHub Pages, Heroku, DigitalOcean, AWS, Azure, Google Cloud
+      'Browsers: WebExtensions API & Stores Deployment',
+      'Code management: Git & GitHub', // GitLab, Bitbucket
+      // 'Code editors: VS Code, Sublime Text, Atom, Brackets, Notepad++',
+      // 'Command line: Windows, Linux, macOS',
+      // 'Databases: MySQL, MongoDB, SQLite',
+      // 'Servers: Apache, Nginx',
+      // 'CMS: WordPress, Drupal, Joomla',
+    ]
+  },
+  {
+    icon: 'youtube-logo',
+    title: 'Content Creator',
+    // description: 'Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.',
+    list: [
+      'Socials: YouTube, LinkedIn, Instagram',
+      'Editing: CapCut, DaVinci Resolve',
+      'Design: Canva', //Figma, Adobe XD
+      // 'Leonardoo.ai'
+    ]
+  },
+  {
+    icon: 'strategy',
+    title: 'Knowledge Manager',
+    // description: 'Urna porttitor rhoncus dolor purus non enim praesent ornare.',
+    list: [
+      'Chatbots: Phind, Perplexity', //Manychat, Chatfuel, MobileMonkey
+      'Second Brain: Obsidian + plugins', //Notion, Roam Research, Evernote, OneNote, , Google Keep
+    ]
+    // list: [
+    //   'SEO, Google Analytics',
+    //   'Social Media',
+    //   'Content Marketing',
+    //   'Email Marketing',
+    // ]
+  }
+]
 ---
 
 <section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Full Stack</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Industry Leader</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Strategy-Minded</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
-	</div>
+  { data.map((item) => (
+    <div class="stack gap-2 lg:gap-4">
+      <Icon icon={item.icon} color="var(--accent-regular)" size="2.5rem" gradient />
+      <h2>{item.title}</h2>
+      <p>{item.description ?? ''}</p>
+      <ul class="list-disc list-inside">
+        { item.list?.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </div>
+  ))}
 </section>
 
 <style>

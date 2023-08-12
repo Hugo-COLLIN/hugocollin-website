@@ -1,0 +1,108 @@
+---
+import Icon from 'astro-icon';
+
+const data = [
+  {
+    icon: 'terminal-window',
+    // title: 'Web Developer',
+    author: 'Yannick Parmentier, Associate Professor in Computer Science at Université de Lorraine (Translated from French)',
+    description: ['I supervised Hugo’s 2nd year IT Bachelor internship. On this occasion, I was able to observe his <b>high level of professionalism.</b>',
+    'He has been <b>autonomous, pro-active, able to learn new technologies [...], communicate effectively on his work, collaborate</b> with other members of the project <b>and propose relevant techniques and tools</b> to the tasks to be performed.',
+    ]
+  },
+]
+//I supervised Hugo's 2nd year internship for the Computer Science Bachelor's degree. On this occasion, I was able to observe his high level of professionalism. He was autonomous, proactive, and was able to learn new technologies (he notably developed strong skills in using the VueJS 3 web framework). He effectively communicated about his work, collaborated with other project members, and proposed relevant techniques and tools for the tasks at hand.
+
+---
+
+<section class="box skills">
+  { data.map((item) => (
+    <div class="stack gap-2 lg:gap-4">
+      <Icon pack="gridicons" name="quote" color="var(--accent-regular)" size="2.5rem" gradient />
+      {item.description?.map((paragraph) => {
+        const splittedParagraph = paragraph.split(/(<b>|<\/b>)/g);
+        // return splittedParagraph + "@";
+        let avoidNext = false;
+        return (
+                <p class="quotation">
+                  {splittedParagraph.map((segment, index, array) => {
+                    if(avoidNext) {
+                      avoidNext = false;
+                      return '';
+                    }
+                    if(segment === '<b>') {
+                      avoidNext = true;
+                      return <b>{array[index + 1]}</b>
+                    }
+                    if(segment === '</b>') return '';
+                    return segment;
+                  })}
+                </p>
+        );
+      })}
+      <Icon pack="gridicons" name="quote" color="var(--accent-regular)" size="2.5rem" gradient style={{ transform: "rotate(180deg)" }}/>
+      <p class="author">{item.author}</p>
+    </div>
+  ))}
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+  .stack {
+    display: flex;
+    //flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .quotation {
+    //font-style: italic;
+    font-size: var(--text-xl);
+    color: var(--gray-100)! important;
+  }
+
+  .author
+  {
+    font-size: var(--text-lg);
+    color: var(--gray-400);
+    text-align: right;
+  }
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		//.skills {
+		//	display: grid;
+		//	grid-template-columns: repeat(3, 1fr);
+		//	gap: 5rem;
+		//}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
