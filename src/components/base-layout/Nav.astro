@@ -8,8 +8,7 @@ import { personalInfo as me} from "../../env.d.ts";
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Home', href: '/' },
 	{ label: 'Work', href: '/work/' },
-	// { label: 'About', href: '/about/' },
-	{ label: 'Blog', href: '/blog/' },
+	// { label: 'Blog', href: '/blog/' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -26,7 +25,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 <nav>
 	<div class="menu-header">
-		<a href="/public" class="site-title menu-button">
+		<a href="/" class="site-title menu-button">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			Hugo COLLIN
 		</a>
@@ -183,7 +182,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-		font-size: var(--text-md);
+		font-size: var(--text-md)!important;
 		line-height: 1.2;
 		list-style: none;
 		padding: 2rem;
