@@ -1,5 +1,5 @@
 ---
-
+import Icon from "astro-icon";
 const cards = [
   {
     "year": "2021 - 2024",
@@ -30,7 +30,7 @@ const cards = [
             return (
                 <article class="educ-bloc">
                   <h5>{degree.year ?? ''}</h5>
-                  <span class="bi-award-fill"></span>
+                  <div class="badge"><Icon pack="bi" name="award" size="3rem" /></div>
                   <h3>{degree.school ?? ''}</h3>
                   <h4><small>{degree.degree ?? ''}</small></h4>
                   {degree.skills?.length > 0 && <hr>}
