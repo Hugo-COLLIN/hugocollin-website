@@ -1,5 +1,7 @@
 ---
 import Icon from '../elements/Icon.astro';
+import AstroIcon from 'astro-icon';
+import Favicon from './public/favicon.svg';
 import ThemeToggle from '../elements/ThemeToggle.astro';
 import type { iconPaths } from '../elements/IconPaths';
 import { personalInfo as me} from "../../env.d.ts";
@@ -26,7 +28,8 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title menu-button">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
+        <!--<Icon icon="terminal-window" color="var(&#45;&#45;accent-regular)" size="1.6em" gradient />-->
+        <AstroIcon name="lamp" color="var(--accent-regular)" size="1.6em" gradient />
 			Hugo COLLIN
 		</a>
 		<menu-button>
