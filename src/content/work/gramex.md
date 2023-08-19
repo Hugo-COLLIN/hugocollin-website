@@ -12,8 +12,8 @@ tags:
     - Axios
 #    - User Interface Design
 #    - User Experience
-    - User Testing
     - Prototyping
+    - User Testing
     - Documentation
 ---
 
@@ -78,3 +78,6 @@ I also found the analysis and prototyping part very enriching, as it allowed me 
 The only unpleasant thing was having to end my collaboration on the GramEx project at the end of this internship. Indeed, I really enjoyed working on GramEx, and it is frustrating to have to leave the project unfinished. Moreover, the working conditions at Loria are very good. The staff is welcoming, the team is friendly, the hours are flexible, and the premises are pleasant. All these conditions are conducive to producing quality work.
 
 In any case, I come out of this experience grown and I hope to be able to live new experiences that are just as enriching.
+
+
+##### Learn more about the project: <ul><li><a href="https://dane.daneteach.fr/gramex/" target="_blank">Recherche en e-éducation – Projet GramEx</a></li><li><a href="https://www.ins2i.cnrs.fr/en/pre-maturation-programme" target="_blank">The pre-maturation programme</a></li></ul>

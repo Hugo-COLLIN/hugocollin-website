@@ -9,9 +9,14 @@ const currentYear = new Date().getFullYear();
 		<p>&copy; {currentYear} Hugo COLLIN</p>
 	</div>
 	<p class="socials">
-		<!--<a href=`${me.twitter}`> Twitter</a>-->
-		<a href=`${me.github}`> GitHub</a>
-		<!--<a href=`${me.codepen}`> CodePen</a>-->
+     <!--{Object.entries(me.so).map((social) => (
+       <a href=`${social[1]}` target="_blank"> ${social[0]}</a>
+     ))}-->
+    <a href=`${me.so.linkedin}` target="_blank"> Linkedin</a>
+    <a href=`${me.so.github}`> GitHub</a>
+    <a href=`${me.so.youtubePerso}`> Youtube</a>
+    <a href=`${me.so.youtubePortfolio}`> Video-portfolio</a>
+    <!--<a href=`${me.codepen}`> CodePen</a>-->
 	</p>
 </footer>
 <style>

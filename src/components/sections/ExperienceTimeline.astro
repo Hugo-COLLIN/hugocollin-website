@@ -1,11 +1,12 @@
 ---
 import Icon from 'astro-icon';
+import CallToAction from "../elements/CallToAction.astro";
 // import Icon from './Icon.astro';
 
 let experienceData = [
   {
     company: 'LORIA',
-    position: 'Analyst-developer Intern',
+    position: 'Analyst-developer intern',
     duration: 'feb. - apr. 2023 (10 weeks)',
     description: ['I developed the interface of the GramEx web application, an educational tool to improve the teaching of French grammar.'],
     link: '/work/gramex',
@@ -13,20 +14,21 @@ let experienceData = [
   {
     company: 'Hug journal - Independant',
     position: 'Blogger',
-    duration: '2013 - 2019',
-    // description: ['TODO']
+    duration: '2013 - 2019 (6 years)',
+    description: ['My personal blog during my childhood and teenage years. I wrote about my passions and my experiences.'],
+    link: '/work/hug-journal',
   },
   {
     company: 'Le Cnam en Grand Est',
-    position: 'Middle school internship',
+    position: 'Middle school intern',
     duration: 'dec. 2017 (1 week)',
-    // description: ['TODO']
+    description: ['My first internship, I discovered the world of work and the Cnam.'],
   },
   {
     company: 'Maurice Barrès middle school',
     position: 'Radio broadcaster',
-    duration: 'sept. 2017 - jun. 2018',
-    // description: ['TODO']
+    duration: 'sept. 2017 - jun. 2018 (1 year)',
+    description: ['I was a student radio broadcaster for the school radio. I participated in creating the radio and made several radio shows.'],
   },
   // More objects for other job experiences...
 ];
@@ -43,7 +45,6 @@ let experienceData = [
                 <li>
                     <div class="bg-circle"><span></span></div>
                     <div class="tl-badge"><Icon pack="bi" name="briefcase-fill" size="1.33em" /></div>
-                    <!--<div class="tl-badge"><Icon icon="briefcase" size="1.33em" /></div>-->
                     <article class={`tl-panel-container-${index % 2 === 0 ? 'l' : 'r'}`}>
                         <section class="tl-panel">
                             <header class="tl-heading">
@@ -54,6 +55,12 @@ let experienceData = [
                             <div class="tl-body">
                               {experience.description?.map(paragraph => <p>{paragraph}</p>)}
                             </div>
+                            <footer class="tl-footer">
+                              {experience.link ? <a href={experience.link}>See more ⨠</a> : ""}
+                            <!--    {experience.link ? <CallToAction href="experience.link">
+                                Learn more ⨠
+                                </CallToAction> : ""}-->
+                            </footer>
                         </section>
                     </article>
                 </li>
@@ -156,11 +163,6 @@ let experienceData = [
     background-color: var(--gray-999_40);
     box-shadow: var(--shadow-sm);
 }
-
-//html.theme-dark .tl-panel *
-//{
-//    color: var(--gray-800)!important;
-//}
 
 .tl-panel-container-r .tl-panel {
     float:left;
