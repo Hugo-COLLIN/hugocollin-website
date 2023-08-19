@@ -9,7 +9,7 @@ tags:
   - Personal website
   - Astro framework
 #  - Static website development
-  - Netlify hosting
+  - Vercel hosting
   - OVHCloud domain name #management
   #  - Blog
   - Portfolio
@@ -25,11 +25,11 @@ I was not satisfied with the result, so I decided to start over from scratch and
 I finally found a solution that suited me: the Astro framework. 
 It is a simple but modular static website generator that attracted me as soon as I discovered it.
 
-I also decided to use Netlify to host my website, as I had heard good things about it and it was free.
+I also decided to use Vercel to host my website, as I had heard good things about it and it was free.
 I combined it with my custom domain name from OVH, which I already had.
 
 ## Challenges Faced
-- Learn how to use Astro and Netlify.
+- Learn how to use Astro and Vercel.
 - Compile all the information I wanted to share in a clear and concise way.
 
 ## Skills Acquired
@@ -37,12 +37,12 @@ I combined it with my custom domain name from OVH, which I already had.
 |------------------------|------------------------------------------------------------|
 | Astro website building | I had to learn how to use Astro to build static websites.  |
 | Domain name management | I learned how to manage my domain name with OVH.           |
-| Netlify hosting        | I also had to learn how to use Netlify to host my website. |
+| Vercel hosting        | I also had to learn how to use Vercel to host my website. |
 
 
 ## Conclusion
 Finally, this project allowed me to learn how to publish a complete website quickly and easily.
-I learned a new way to build static websites with Astro and to host them with Netlify.
+I learned a new way to build static websites with Astro and to host them with Vercel.
 I also learned how to manage my domain name with OVH.
 I am very satisfied with the result and I hope you will enjoy it too.
 

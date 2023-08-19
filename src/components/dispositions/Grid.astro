@@ -41,7 +41,7 @@ const { variant } = Astro.props;
 		}
 
 		/* Shift first item in each row vertically to create staggered effect. */
-		.grid.offset > :global(:nth-child(odd)) {
+		.grid.offset > :global(:nth-child(even)) { /*odd*/
 			transform: translateY(var(--row-offset));
 		}
 
