@@ -1,0 +1,26 @@
+---
+import Pill from "./Pill.astro";
+import Icon from "./Icon.astro";
+---
+
+<div class="roles">
+	<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
+	<Pill><Icon icon="microphone-stage" size="1.33em" /> Content Creator</Pill>
+	<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+</div>
+
+<style>
+  .roles {
+      display: none;
+  }
+
+  @media (min-width: 50em) {
+    .roles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+  }
+</style>

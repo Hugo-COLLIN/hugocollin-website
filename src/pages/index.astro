@@ -21,6 +21,8 @@ import ExperienceTimeline from "../components/sections/ExperienceTimeline.astro"
 import MentionsGallery from "../components/sections/MentionsGallery.astro";
 import Degrees from "../components/sections/Learning.astro";
 import Quotation from "../components/sections/Quotation.astro";
+import ContactMe from "../components/elements/ContactMeBtn.astro";
+import SkillsPills from "../components/elements/SkillsPills.astro";
 
 ---
 
@@ -31,14 +33,14 @@ import Quotation from "../components/sections/Quotation.astro";
 			<header class="hero">
 				<Hero
 					title={`Hello, I'm \n ${me.firstname} ${me.lastname}!`}
-					tagline="💻 I am a creative developer based in France, passionate by design, knowledge management and writing!"
+					tagline={`${me.tagline}`}
 					align="start"
 				>
-					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Content Creator</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
-					</div>
+					<!--<SkillsPills />-->
+          <div class="centerBtn">
+              <ContactMe/>
+          </div>
+          <div class="mb"></div>
 				</Hero>
 
 				<img
@@ -100,7 +102,6 @@ import Quotation from "../components/sections/Quotation.astro";
       <!--  <MentionsGallery />-->
 			<!--</section>-->
 
-      <!--<ExperienceTimeline />-->
 		</main>
 
 		<ContactCTA />
@@ -108,6 +109,11 @@ import Quotation from "../components/sections/Quotation.astro";
 </BaseLayout>
 
 <style>
+    .mb
+    {
+        margin-bottom: 1.5rem;
+    }
+
 	.hero {
 		display: flex;
 		flex-direction: column;
@@ -116,9 +122,13 @@ import Quotation from "../components/sections/Quotation.astro";
     //align-items: flex-start;
 	}
 
-	.roles {
-		display: none;
-	}
+  .centerBtn {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+  }
 
 	.hero img {
 		aspect-ratio: 5 / 4;
@@ -134,14 +144,6 @@ import Quotation from "../components/sections/Quotation.astro";
 			grid-template-columns: 6fr 4fr;
 			padding-inline: 2.5rem;
 			gap: 3.75rem;
-		}
-
-		.roles {
-			margin-top: 0.5rem;
-			display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-			gap: 0.5rem;
 		}
 
 		.hero img {
