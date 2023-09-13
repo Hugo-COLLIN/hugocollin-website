@@ -1,52 +1,27 @@
 ---
-import {personalInfo as me } from "../env.d.ts";
-// import { Spa } from "astro-spa"
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Disposition imports
-import Hero from '../components/dispositions/Hero.astro';
 import ComplexSection from "../components/dispositions/ComplexSection.astro";
 
 // Page section components
+import IntroHeader from "../components/sections/IntroHeader.astro";
 import ContactCTA from '../components/sections/ContactCTA.astro';
-import Skills from '../components/sections/Skills.astro';
+
+// Inside section components
 import FeaturedWork from "../components/sections/FeaturedWork.astro";
 import ExperienceTimeline from "../components/sections/ExperienceTimeline.astro";
-// import MentionsGallery from "../components/sections/MentionsGallery.astro";
 import Degrees from "../components/sections/Learning.astro";
 import Quotation from "../components/sections/Quotation.astro";
-import ContactMe from "../components/elements/ContactMeBtn.astro";
-// import SkillsPills from "../components/elements/SkillsPills.astro";
+// import MentionsGallery from "../components/sections/MentionsGallery.astro";
 
 ---
 
 <BaseLayout>
-  <!--<Spa defaultAnimation={false} progressBar={false}/>-->
 	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero">
-				<Hero
-					title={`Hello, I'm \n ${me.firstname} ${me.lastname}!`}
-					tagline={`${me.tagline}`}
-					align="start"
-				>
-					<!--<SkillsPills />-->
-          <div class="centerBtn">
-              <ContactMe/>
-          </div>
-          <div class="mb"></div>
-				</Hero>
-
-				<img
-					alt=`${me.firstname} ${me.lastname}`
-					src="/assets/pp.jpg"
-				/>
-			</header>
-
-			<Skills />
-		</div>
+		<IntroHeader />
 
 		<main class="wrapper stack gap-20">
 
@@ -81,51 +56,6 @@ import ContactMe from "../components/elements/ContactMeBtn.astro";
 </BaseLayout>
 
 <style>
-    .mb
-    {
-        margin-bottom: 1.5rem;
-    }
-
-	.hero {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-  .centerBtn {
-      margin-top: 0.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-  }
-
-	.hero img {
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	@media (min-width: 50em) {
-		.hero {
-			display: grid;
-			grid-template-columns: 6fr 4fr;
-			padding-inline: 2.5rem;
-			gap: 3.75rem;
-		}
-
-		.hero img {
-			aspect-ratio: 5 / 6;
-			border-radius: 4.5rem;
-			object-fit: cover;
-      max-width: 90%;
-		}
-	}
-
-	/* ====================================================== */
-
 	.section {
 		display: grid;
 		gap: 2rem;
@@ -169,11 +99,6 @@ import ContactMe from "../components/elements/ContactMeBtn.astro";
 		font-size: var(--text-2xl);
 	}
 
-  .complex-section > header
-  {
-      margin-bottom: 2rem;
-  }
-
 	@media (min-width: 50em) {
 		.section {
 			grid-template-columns: repeat(4, 1fr);
@@ -205,28 +130,6 @@ import ContactMe from "../components/elements/ContactMeBtn.astro";
 
 		.cta {
 			grid-area: cta;
-		}
-	}
-
-	/* ====================================================== */
-
-	.mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
-	}
-
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
 		}
 	}
 </style>

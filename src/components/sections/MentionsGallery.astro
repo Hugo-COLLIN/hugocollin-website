@@ -1,8 +1,7 @@
 ---
-
 import Grid from "../dispositions/Grid.astro";
-
 ---
+
 <div class="gallery">
     <Grid variant="small">
       {
@@ -14,3 +13,25 @@ import Grid from "../dispositions/Grid.astro";
       }
     </Grid>
 </div>
+
+<style>
+    .mention-card {
+        display: flex;
+        height: 7rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid var(--gray-800);
+        border-radius: 1.5rem;
+        color: var(--gray-300);
+        background: var(--gradient-subtle);
+        box-shadow: var(--shadow-sm);
+    }
+
+    @media (min-width: 50em) {
+        .mention-card {
+            border-radius: 1.5rem;
+            height: 9.5rem;
+        }
+    }
+</style>
