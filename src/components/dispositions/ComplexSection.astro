@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const {description, title} = Astro.props;
+
+import Quotation from "../sections/Quotation.astro";
+---
+<section class="complex-section">
+    <header class="section-header">
+        <h3>{title}</h3>
+      {description && <p>{description}</p>}
+    </header>
+    <div class="content">
+        <slot/>
+    </div>
+</section>
+
+<style>
+  .section-header {
+      justify-self: center;
+  //text-align: center;
+      max-width: 50ch;
+      font-size: var(--text-md);
+      color: var(--gray-300);
+  }
+
+  .section-header h3 {
+      font-size: var(--text-2xl);
+  }
+
+  .complex-section > header
+  {
+      margin-bottom: 2rem;
+  }
+
+  @media (min-width: 50em) {
+      .section-header {
+          grid-area: header;
+          font-size: var(--text-lg);
+      }
+
+      .section-header h3 {
+          font-size: var(--text-4xl);
+      }
+
+      .with-cta .section-header {
+          justify-self: flex-start;
+          text-align: left;
+      }
+  }
+</style>

@@ -1,28 +1,24 @@
 ---
+import {personalInfo as me } from "../env.d.ts";
+// import { Spa } from "astro-spa"
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Component Imports
-import CallToAction from '../components/elements/CallToAction.astro';
-import Grid from '../components/dispositions/Grid.astro';
+// Disposition imports
 import Hero from '../components/dispositions/Hero.astro';
-import Icon from '../components/elements/Icon.astro';
-import Pill from '../components/elements/Pill.astro';
+import ComplexSection from "../components/dispositions/ComplexSection.astro";
 
 // Page section components
 import ContactCTA from '../components/sections/ContactCTA.astro';
 import Skills from '../components/sections/Skills.astro';
 import FeaturedWork from "../components/sections/FeaturedWork.astro";
-
-import {personalInfo as me } from "../env.d.ts";
-// import { Spa } from "astro-spa"
 import ExperienceTimeline from "../components/sections/ExperienceTimeline.astro";
-import MentionsGallery from "../components/sections/MentionsGallery.astro";
+// import MentionsGallery from "../components/sections/MentionsGallery.astro";
 import Degrees from "../components/sections/Learning.astro";
 import Quotation from "../components/sections/Quotation.astro";
 import ContactMe from "../components/elements/ContactMeBtn.astro";
-import SkillsPills from "../components/elements/SkillsPills.astro";
+// import SkillsPills from "../components/elements/SkillsPills.astro";
 
 ---
 
@@ -53,6 +49,7 @@ import SkillsPills from "../components/elements/SkillsPills.astro";
 		</div>
 
 		<main class="wrapper stack gap-20">
+
       <section class="section with-background with-cta">
         <header class="section-header stack gap-2 lg:gap-4">
             <h3>Selected Work</h3>
@@ -61,34 +58,9 @@ import SkillsPills from "../components/elements/SkillsPills.astro";
 			  <FeaturedWork />
       </section>
 
-      <!--<section class="section with-background bg-variant">-->
-      <section class="complex-section">
-          <header class="section-header">
-              <h3>Experience</h3>
-              <!--<p>Take a look below at some of my featured work from the past few years:</p>-->
-          </header>
-          <div class="content">
-              <ExperienceTimeline />
-          </div>
-      </section>
-      <section class="complex-section">
-          <header class="section-header">
-              <h3>Learning</h3>
-              <!--<p>Take a look below at some of my featured work from the past few years:</p>-->
-          </header>
-          <div class="content">
-              <Degrees />
-          </div>
-      </section>
-      <section class="complex-section">
-          <header class="section-header">
-              <h3>Recommendations</h3>
-              <!--<p>Take a look below at some of my featured work from the past few years:</p>-->
-          </header>
-          <div class="content">
-             <Quotation />
-          </div>
-      </section>
+      <ComplexSection title="Experience"><ExperienceTimeline /></ComplexSection>
+      <ComplexSection title="Learning"><Degrees /></ComplexSection>
+      <ComplexSection title="Recommendations"><Quotation /></ComplexSection>
 
 			<!--<section class="section with-background bg-variant">-->
 			<!--	<header class="section-header stack gap-2 lg:gap-4">-->
@@ -118,8 +90,6 @@ import SkillsPills from "../components/elements/SkillsPills.astro";
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		//gap: 2rem;
-    //align-items: flex-start;
 	}
 
   .centerBtn {
