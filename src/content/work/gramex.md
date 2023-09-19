@@ -1,6 +1,7 @@
 ---
 title: The GramEx Interface
 publishDate: 2023-04-28 00:00:00
+featured: true
 img: /assets/work/gramex.png
 img_alt: GramEx app
 description: |

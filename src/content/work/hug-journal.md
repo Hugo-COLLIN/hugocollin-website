@@ -1,6 +1,7 @@
 ---
 title: Hug Journal
 publishDate: 2013-01-01 00:00:00
+featured: true
 img: /assets/work/hj400.png
 img_alt: Hug Journal
 description: |

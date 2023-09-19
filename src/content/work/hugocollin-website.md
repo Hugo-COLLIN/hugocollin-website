@@ -1,6 +1,7 @@
 ---
 title: My personal website - hugocollin.com
 publishDate: 2022-02-01 00:00:00
+featured: true
 img: /assets/work/hc-website.png
 img_alt: TODO
 description: |
