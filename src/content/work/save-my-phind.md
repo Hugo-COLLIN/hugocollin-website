@@ -1,7 +1,8 @@
 ---
 title: Save my Chatbot
 publishDate: 2023-03-15 00:00:00
-featured: true
+featured: 2
+visible: true
 img: /assets/work/Gif2_SaveMyPhind.gif
 img_alt: Save my Chatbot extension
 description: |

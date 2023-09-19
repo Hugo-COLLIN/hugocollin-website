@@ -1,7 +1,8 @@
 ---
 title: The GramEx Interface
 publishDate: 2023-04-28 00:00:00
-featured: true
+featured: 1
+visible: true
 img: /assets/work/gramex.png
 img_alt: GramEx app
 description: |
@@ -81,4 +82,6 @@ The only unpleasant thing was having to end my collaboration on the GramEx proje
 In any case, I come out of this experience grown and I hope to be able to live new experiences that are just as enriching.
 
 
-##### Learn more about the project: <ul><li><a href="https://dane.daneteach.fr/gramex/" target="_blank">Recherche en e-éducation – Projet GramEx</a></li><li><a href="https://www.ins2i.cnrs.fr/en/pre-maturation-programme" target="_blank">The pre-maturation programme</a></li></ul>
+##### Learn more about the project: 
+- <a href="https://dane.daneteach.fr/gramex/" target="_blank">Recherche en e-éducation – Projet GramEx</a>
+- <a href="https://www.ins2i.cnrs.fr/en/pre-maturation-programme" target="_blank">The pre-maturation programme - CNRS</a></li></ul>

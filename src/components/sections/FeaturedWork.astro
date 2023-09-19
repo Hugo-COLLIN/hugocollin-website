@@ -8,8 +8,9 @@ import Icon from "../elements/Icon.astro";
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
+  .filter((project) => typeof project.data.featured !== "undefined")
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .filter((project) => project.data.featured === true)
+  .sort((a, b) => a.data.featured.valueOf() - b.data.featured.valueOf())
   .slice(0, 4);
 ---
 
