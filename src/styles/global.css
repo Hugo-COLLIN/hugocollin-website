@@ -54,7 +54,7 @@
 
 	/* Text Sizes */
 	--text-sm: 0.875rem;
-	--text-base: 1rem;
+	--text-base: 1.1rem;
 	--text-md: 1.125rem;
 	--text-lg: 1.25rem;
 	--text-xl: 1.625rem;
@@ -252,4 +252,14 @@ h5 {
 	.lg\:gap-48 {
 		gap: 12rem;
 	}
+}
+
+main p:not(.tagline):not(.quotation):not(.author), main li, main td, main th {
+    font-size: var(--text-base);
+}
+
+table, th, td {
+    border: 2px solid;
+    border-collapse:collapse;
+    padding: 3px;
 }
