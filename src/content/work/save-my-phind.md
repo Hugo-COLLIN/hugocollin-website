@@ -1,5 +1,5 @@
 ---
-title: Save my Chatbot
+title: Save my Chatbot (ex. Save my Phind)
 publishDate: 2023-03-15 00:00:00
 featured: 2
 visible: true
@@ -22,16 +22,16 @@ tags:
 Chatbots like [Phind.com](https://phind.com) and [Perplexity.ai](https://perplexity.ai) are really powerful tools. 
 As an Obsidian.md user, I wanted to process the provided information into my knowledge base, but I couldn't find any way to save or download the threads locally.
 
-That's why I develop the Save my Chatbot extension (formerly "Save my Phind). 
-When you're on a Phind or Perplexity thread, simply click on the extension icon to extract it's content into a formatted markdown file.
+That's why I develop the **Save my Chatbot** extension (formerly "Save my Phind). 
+**When you're on a Phind or Perplexity thread, simply click on the extension icon to extract it's content into a formatted markdown file.**
 
-The last updates empowers the Phind interface by adding a saving button directly inside the page. 
+It also empowers the Phind interface by adding a saving button directly inside the page. 
 Plus, you can now export all the threads in your list by clicking on the "Export All Threads" button.
 Finally, I also added a filter bar to help you to look inside your recent threads.
 
 
 ## Goal
-The primary goal behind "Save my Chatbot" was to provide users with the ability to keep AI-generated information offline, to enable them to share threads with others, and read and process them in a note-taking app like Obsidian.
+The primary goal behind "Save my Chatbot" was to provide users with the ability **to keep AI-generated information offline, to enable them to share threads with others, and read and process them in a note-taking app** like Obsidian.
 Now, it also enhances the usability of Phind by modifying directly its interface.
 
 
