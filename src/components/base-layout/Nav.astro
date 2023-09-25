@@ -1,5 +1,5 @@
 ---
-import Icon from '../elements/Icon.astro';
+import LocalIcon from '../elements/Icon.astro';
 import AstroIcon from 'astro-icon';
 import Favicon from './public/favicon.svg';
 import ThemeToggle from '../elements/ThemeToggle.astro';
@@ -18,6 +18,8 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
   { label: 'LinkedIn', href: me.so.linkedin, icon: 'linkedin-logo' },
   { label: 'GitHub', href: me.so.github, icon: 'github-logo' },
   // { label: 'YouTube', href: me.so.youtubePerso, icon: 'youtube-logo' },
+  { label: 'Ko-fi', href: me.so.kofi, pack: 'cib', icon: 'ko-fi' },
+  // { label: 'Ko-fi', href: me.so.kofi, pack: 'bi', icon: 'award' },
   { label: 'YouTube', href: me.so.youtubePortfolio, icon: 'youtube-logo' },
   // { label: 'Twitch', href: 'https://twitch.tv/me', icon: 'twitch-logo' },
 	// { label: 'CodePen', href: 'https://codepen.io/me', icon: 'codepen-logo' },
@@ -37,7 +39,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			<template>
 				<button class="menu-button" aria-expanded="false">
 					<span class="sr-only">Menu</span>
-					<Icon icon="list" />
+					<LocalIcon icon="list" />
 				</button>
 			</template>
 		</menu-button>
@@ -68,10 +70,11 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		<div class="menu-footer">
 			<div class="socials menu-button">
 				{
-					iconLinks.map(({ href, icon, label }) => (
+					iconLinks.map(({ href, icon, label , pack}) => (
 						<a href={href} class="social" target="_blank">
 							<span class="sr-only">{label}</span>
-							<Icon icon={icon} />
+              {pack ? <AstroIcon pack={pack} name={icon} size="1em" /> : <LocalIcon icon={icon} />}
+
 						</a>
 					))
 				}

@@ -13,5 +13,6 @@ export const personalInfo = {
     twitter: "https://twitter.com/hugocoll1n",
     reddit: "https://www.reddit.com/user/hugocoll1n",
     tiktok: "https://www.tiktok.com/@hugocoll1n",
+    kofi: "https://ko-fi.com/hcollin_dev",
   },
 }
