@@ -13,8 +13,8 @@ tags:
 
 ---
 
-#### Want to try Leon?
-- [🌐 Visit LeonApp Now](https://leon-app-vocab-voice-learning.vercel.app/)
+##### [⏩ Want to try Leon? Click here!](https://leon-app-vocab-voice-learning.vercel.app/)
+##### [📁 Check the code on GitHub](https://github.com/Hugo-COLLIN/LeonApp-VocabVoiceLearning)
 
 ## Overview
 The purpose of the project was to develop a web application to learn vocabulary. But the main feature 
