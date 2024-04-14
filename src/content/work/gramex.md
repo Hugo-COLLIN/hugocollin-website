@@ -4,7 +4,7 @@ publishDate: 2023-04-28 00:00:00
 featured: 3
 visible: true
 img: /assets/work/gramex.png
-img_alt: GramEx app
+img_alt: GramEx interface
 description: |
   Web Development Internship at Loria
 tags:

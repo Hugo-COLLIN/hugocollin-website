@@ -4,7 +4,7 @@ publishDate: 2024-04-14 00:00:00
 featured: 1
 visible: true
 img: /assets/work/metaphraso.png
-img_alt: Metaphraso app
+img_alt: Metaphraso interface
 description: 🎥 Analysis, Transcription and Video Dubbing by Artificial Intelligence
 tags:
     - Web Development
