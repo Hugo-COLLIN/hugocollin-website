@@ -11,4 +11,5 @@ export default defineConfig({
       'https://leon.hugocollin.com'
     ]
   })]
+
 });
