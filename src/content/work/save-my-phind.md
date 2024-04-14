@@ -1,22 +1,19 @@
 ---
-title: Save my Chatbot (ex. Save my Phind)
+title: "🚀 Save my Chatbot (aka Save my Phind)"
 publishDate: 2023-03-15 00:00:00
 featured: 2
 visible: true
 img: /assets/work/Gif2_SaveMyPhind.gif
 img_alt: Save my Chatbot extension
 description: |
-  🚀 A browser extension that allows you to export your Phind and Perplexity threads into markdown files.
+  🤖 A browser extension that allows you to export your Phind and Perplexity threads into markdown files.
 tags:
   - Browser Extension
   - JavaScript
   - Web Scraping
 
 ---
-
-#### Download Save my Chatbot:
-- [⏩ On Chromium browsers (Chrome, Edge, Opera, Brave, etc.)](https://chrome.google.com/webstore/detail/agklnagmfeooogcppjccdnoallkhgkod)
-- [⏩ On Firefox](https://addons.mozilla.org/fr/firefox/addon/save-my-phind)
+##### [⏩ Visit the extension official page](https://save.hugocollin.com)
 
 ## Overview
 Chatbots like [Phind.com](https://phind.com) and [Perplexity.ai](https://perplexity.ai) are really powerful tools. 
@@ -55,6 +52,14 @@ During the development of Save my Chatbot, I possessed and acquired the followin
 
 ## Conclusion
 Developing "Save my Chatbot" is a rewarding experience.
-It not only allows me to put my skills to the test but also provide me with the opportunity to contribute to the Phind community.
-It addresses the need for offline access, sharing, and integration of newly AI generated content
+It not only allows me to put my skills to the test but also provide me with the opportunity to contribute to the AI community.
+It addresses the need for offline access, sharing, and integration of newly AI generated content.
 I'm really excited to see how users will benefit from this extension.
+
+
+#### Download Save my Chatbot:
+- [⏩ On Chromium browsers (Chrome, Edge, Opera, Brave, etc.)](https://chrome.google.com/webstore/detail/agklnagmfeooogcppjccdnoallkhgkod)
+- [⏩ On Firefox](https://addons.mozilla.org/fr/firefox/addon/save-my-phind)
+
+
+[//]: # (##### Visit the extension page: [Save my Chatbot on Chrome Web Store]&#40;https://chrome.google.com/webstore/detail/agklnagmfeooogcppjccdnoallkhgkod&#41;)

@@ -1,10 +1,10 @@
 ---
-title: My personal website - hugocollin.com
+title: 🙋 My personal website - hugocollin.com
 publishDate: 2022-02-01 00:00:00
-featured: 3
+#featured: 3
 visible: true
 img: /assets/work/hc-website.png
-img_alt: TODO
+img_alt: Personal website
 description: |
   😇 The website you are currently on.
 tags:
