@@ -5,5 +5,11 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://hugocollin.com",
-  integrations: [sitemap()]
+  integrations: [sitemap({
+    customPages: [
+      'https://save.hugocollin.com',
+      'https://leon.hugocollin.com'
+    ]
+  })]
+
 });
