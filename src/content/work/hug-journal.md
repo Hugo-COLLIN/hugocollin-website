@@ -1,7 +1,7 @@
 ---
-title: Hug Journal
+title: ✏️ Hug Journal
 publishDate: 2013-01-01 00:00:00
-featured: 4
+#featured: 4
 visible: true
 img: /assets/work/hj400.png
 img_alt: Hug Journal

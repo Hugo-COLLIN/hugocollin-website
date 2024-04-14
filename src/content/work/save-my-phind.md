@@ -1,12 +1,12 @@
 ---
-title: Save my Chatbot (ex. Save my Phind)
+title: "🚀 Save my Chatbot (ex. Save my Phind)"
 publishDate: 2023-03-15 00:00:00
 featured: 2
 visible: true
 img: /assets/work/Gif2_SaveMyPhind.gif
 img_alt: Save my Chatbot extension
 description: |
-  🚀 A browser extension that allows you to export your Phind and Perplexity threads into markdown files.
+  🤖 A browser extension that allows you to export your Phind and Perplexity threads into markdown files.
 tags:
   - Browser Extension
   - JavaScript
