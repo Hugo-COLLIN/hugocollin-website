@@ -1,7 +1,7 @@
 ---
 title: "⚙️ The Plic Compiler"
 publishDate: 2024-03-01 00:00:00
-#featured: 4
+featured: 4
 visible: true
 img: /assets/work/plic.png
 img_alt: Plic Compiler

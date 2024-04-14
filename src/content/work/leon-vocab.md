@@ -1,7 +1,7 @@
 ---
 title: "🏅 LeonApp: Learn vocabulary and have fun!"
 publishDate: 2023-12-01 00:00:00
-featured: 4
+#featured: 4
 visible: true
 img: /assets/work/leon.png
 img_alt: Leon interface
