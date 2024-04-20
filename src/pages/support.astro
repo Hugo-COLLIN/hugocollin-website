@@ -7,6 +7,7 @@ import MainHead from '../components/base-layout/MainHead.astro';
     <MainHead />
 </head>
 <script>
-  window.location.replace("https://www.paypal.com/donate/?hosted_button_id=FN8Z6465KACGN");
+  import {personalInfo as me} from "../env.d.ts";
+  window.location.replace(me.so.paypal);
 </script>
 </html>
