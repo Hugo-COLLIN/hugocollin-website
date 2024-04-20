@@ -14,6 +14,6 @@ export const personalInfo = {
     reddit: "https://www.reddit.com/user/hugocoll1n",
     tiktok: "https://www.tiktok.com/@hugocoll1n",
     kofi: "https://ko-fi.com/hcollin_dev",
-    paypal: "https://www.paypal.com/donate/?hosted_button_id=FLPEPKE7UURGW"
+    paypal: "https://www.paypal.com/donate/?hosted_button_id=FN8Z6465KACGN"
   },
 }
