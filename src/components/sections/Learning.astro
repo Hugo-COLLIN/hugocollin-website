@@ -62,15 +62,15 @@ const cards = [
     }
 
     .educ-bloc {
-        flex: 0 1 calc(50% - 10px); /* Taille des blocs à 50% moins une petite marge */
-        max-width: calc(50% - 10px); /* S'assure que deux blocs tiennent bien côte à côte */
+        flex: 0 1 calc(50% - 20px); // Block size at 50% minus a small margin
+        max-width: calc(50% - 10px); // Ensures that two blocks are side by side
         text-align: center;
         background: var(--accent-text-over);
         border: 1px solid var(--gray-800);
         border-radius: 0.75rem;
         padding: 1.5rem;
         box-shadow: var(--shadow-sm);
-        margin: 10px 5px; /* Marge pour créer un espacement */
+        margin: 10px 10px; // Margin to create spacing, 10px on each side (= 20px small margin redux at flex attribute)
     }
 
     .educ-bloc h5 {
