@@ -5,6 +5,12 @@ import Icon from 'astro-icon';
 
 let experienceData = [
   {
+    company: 'Inist-CNRS',
+    position: 'Analyst-developer intern',
+    duration: 'apr. - jul. 2024 (12 weeks)',
+    description: ['I developed a web service in the DMP OPIDoR application, integrated in the export feature, that enables administrators to convert structured information into written paragraphs']
+  },
+  {
     company: 'LORIA',
     position: 'Analyst-developer intern',
     duration: 'feb. - apr. 2023 (10 weeks)',
@@ -32,175 +38,169 @@ let experienceData = [
   },
   // More objects for other job experiences...
 ];
-
 ---
 
 <section id="experience" class="redback">
-    <!--<header>-->
-    <!--  <h2>Experience</h2>-->
-    <!--</header>-->
-    <ul class="timeline container">
-      {experienceData.map((experience, index) => {
-        return (
-                <li>
-                    <div class="bg-circle"><span></span></div>
-                    <div class="tl-badge"><Icon pack="bi" name="briefcase-fill" size="1.33em" /></div>
-                    <article class={`tl-panel-container-${index % 2 === 0 ? 'l' : 'r'}`}>
-                        <section class="tl-panel">
-                            <header class="tl-heading">
-                                <h3>{experience.company}</h3>
-                                <h4>{experience.position}</h4>
-                                <p class="text-muted"><span class="bi-clock-fill"></span> {experience.duration}</p>
-                            </header>
-                            <div class="tl-body">
-                              {experience.description?.map(paragraph => <p>{paragraph}</p>)}
-                            </div>
-                            <footer class="tl-footer">
-                              {experience.link ? <a href={experience.link}>See more ⨠</a> : ""}
-                            <!--    {experience.link ? <CallToAction href="experience.link">
-                                Learn more ⨠
-                                </CallToAction> : ""}-->
-                            </footer>
-                        </section>
-                    </article>
-                </li>
-          );
-        })
-      }
-    </ul>
+  <!--<header>-->
+  <!--  <h2>Experience</h2>-->
+  <!--</header>-->
+  <ul class="timeline container">
+    {experienceData.map((experience, index) => {
+      return (
+          <li>
+            <div class="bg-circle"><span></span></div>
+            <div class="tl-badge">
+              <Icon pack="bi" name="briefcase-fill" size="1.33em"/>
+            </div>
+            <article class={`tl-panel-container-${index % 2 === 0 ? 'l' : 'r'}`}>
+              <section class="tl-panel">
+                <header class="tl-heading">
+                  <h3>{experience.company}</h3>
+                  <h4>{experience.position}</h4>
+                  <p class="text-muted"><span class="bi-clock-fill"></span> {experience.duration}</p>
+                </header>
+                <div class="tl-body">
+                  {experience.description?.map(paragraph => <p>{paragraph}</p>)}
+                </div>
+                <footer class="tl-footer">
+                  {experience.link ? <a href={experience.link}>See more ⨠</a> : ""}
+                  <!--    {experience.link ? <CallToAction href="experience.link">
+                  Learn more ⨠
+                  </CallToAction> : ""}-->
+                </footer>
+              </section>
+            </article>
+          </li>
+      );
+    })
+    }
+  </ul>
 </section>
 
 <style>
-#experience ul
-{
-    list-style: none;
-}
-
-.timeline {
-    padding: 30px 10px;
-    position: relative;
-}
-
-.timeline:before,
-.tl-badge,
-.bg-circle
-{
-    position: absolute;
-    left: 50%;
-}
-
-.timeline:before {
-    content: " ";
-    top: 0;
-    bottom: 0;
-    width: 5px;
-    background-color: #333;
-    margin-left: -2.5px;
-}
-
-.timeline > li {
-    margin-bottom:20px;
-    position: relative;
-}
-
-.timeline > li:before,
-.timeline > li:after
-{
-    content:" ";
-    display:table;
-}
-
-.timeline > li:after
-{
-    clear:both;
-}
-
-.tl-badge,
-.bg-circle
-{
-    width:50px;
-    line-height: 50px;
-    font-size:20px;
-    text-align:center;
-    top:16px;
-    margin-left:-25px;
-}
-
-.tl-badge
-{
-    margin-top:6px;
-    color: #eee;
-}
-
-.bg-circle
-{
-    background-color: var(--accent-regular);
-    border-radius:50%;
-}
-
-.bg-circle > span {
-    padding: 2em;
-}
-
-.tl-panel-container-l {
-    width: 50%;
-    float:left;
-}
-
-.tl-panel-container-r {
-    width: 50%;
-    float:right;
-}
-
-.tl-panel {
-    width: 90%;
-    float:right;
-    margin-right:40px;
-    position:relative;
-    border: 1px solid var(--gray-800);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    background-color: var(--gray-999_40);
-    box-shadow: var(--shadow-sm);
-}
-
-.tl-panel-container-r .tl-panel {
-    float:left;
-    margin-left:40px;
-}
-
-.tl-panel:after {
-    content:" ";
-    position:absolute;
-    top:27px;
-    right: -14px;
-    display:inline-block;
-    border-top:14px solid transparent;
-    border-left: 14px solid #fff;
-    border-right:0 solid #fff;
-    border-bottom: 14px solid transparent;
-}
-
-.tl-panel-container-r .tl-panel:after {
-    border-left-width:0;
-    border-right-width:14px;
-    left:-14px;
-    right:auto;
-}
-
-.tl-panel h3 {
-    text-transform: uppercase;
-    font-size : 1em;
-}
-
-@media (min-width: 50em) {
-    .box {
-        border-radius: 1.5rem;
-        padding: 2.5rem;
+    #experience ul {
+        list-style: none;
     }
 
-    .skills h2 {
-        font-size: var(--text-2xl);
+    .timeline {
+        padding: 30px 10px;
+        position: relative;
     }
-}
+
+    .timeline:before,
+    .tl-badge,
+    .bg-circle {
+        position: absolute;
+        left: 50%;
+    }
+
+    .timeline:before {
+        content: " ";
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #333;
+        margin-left: -2.5px;
+    }
+
+    .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .timeline > li:before,
+    .timeline > li:after {
+        content: " ";
+        display: table;
+    }
+
+    .timeline > li:after {
+        clear: both;
+    }
+
+    .tl-badge,
+    .bg-circle {
+        width: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        text-align: center;
+        top: 16px;
+        margin-left: -25px;
+    }
+
+    .tl-badge {
+        margin-top: 6px;
+        color: #eee;
+    }
+
+    .bg-circle {
+        background-color: var(--accent-regular);
+        border-radius: 50%;
+    }
+
+    .bg-circle > span {
+        padding: 2em;
+    }
+
+    .tl-panel-container-l {
+        width: 50%;
+        float: left;
+    }
+
+    .tl-panel-container-r {
+        width: 50%;
+        float: right;
+    }
+
+    .tl-panel {
+        width: 90%;
+        float: right;
+        margin-right: 40px;
+        position: relative;
+        border: 1px solid var(--gray-800);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        background-color: var(--gray-999_40);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .tl-panel-container-r .tl-panel {
+        float: left;
+        margin-left: 40px;
+    }
+
+    .tl-panel:after {
+        content: " ";
+        position: absolute;
+        top: 27px;
+        right: -14px;
+        display: inline-block;
+        border-top: 14px solid transparent;
+        border-left: 14px solid #fff;
+        border-right: 0 solid #fff;
+        border-bottom: 14px solid transparent;
+    }
+
+    .tl-panel-container-r .tl-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+
+    .tl-panel h3 {
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+
+    @media (min-width: 50em) {
+        .box {
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+        }
+
+        .skills h2 {
+            font-size: var(--text-2xl);
+        }
+    }
 </style>

@@ -2,6 +2,11 @@
 import Icon from "astro-icon";
 const cards = [
   {
+    "year": "2024 - 2026",
+    "school": "IDMC",
+    "degree": "Master's Degree in Information Systems and Business Management",
+  },
+  {
     "year": "2021 - 2024",
     "school": "IUT Nancy-Charlemagne",
     "degree": "IT Bachelor's Degree - Software Engineering",
@@ -11,68 +16,61 @@ const cards = [
     // ]
   },
   {
-      "year": "2018 - 2021",
-      "school": "Lycée Pierre Mendès France - Epinal",
-      "degree": "General Baccalaureate - Mathematics, Engineering, Computer Science",
-      // "skills": [
-      //     "Compétence 1",
-      //     "Compétence 2"
-      // ]
-  },
+    "year": "2018 - 2021",
+    "school": "Lycée Pierre Mendès France - Epinal",
+    "degree": "General Baccalaureate - Mathematics, Engineering, Computer Science",
+    // "skills": [
+    //     "Compétence 1",
+    //     "Compétence 2"
+    // ]
+  }
 ]
 ---
 <section id="education" class="whiteback">
-    <!--<header>-->
-    <!--    <h2>Education</h2>-->
-    <!--</header>-->
-    <article class="container">
-          {cards.map((degree, index) => {
-            return (
-                <article class="educ-bloc">
-                  <h5>{degree.year ?? ''}</h5>
-                  <div class="badge"><Icon pack="bi" name="award" size="3rem" /></div>
-                  <h3>{degree.school ?? ''}</h3>
-                  <h4><small>{degree.degree ?? ''}</small></h4>
-                  {degree.skills?.length > 0 && <hr>}
-                  {degree.skills?.map((skill, index) => {
-                    return (
-                      <p>{skill}</p>
-                    )
-                  })}
-                </article>
-            )
-          })}
-    </article>
+  <!--<header>-->
+  <!--    <h2>Education</h2>-->
+  <!--</header>-->
+  <article class="container">
+    {cards.map((degree, index) => {
+      return (
+          <article class="educ-bloc">
+            <h5>{degree.year ?? ''}</h5>
+            <div class="badge">
+              <Icon pack="bi" name="award" size="3rem"/>
+            </div>
+            <h3>{degree.school ?? ''}</h3>
+            <h4><small>{degree.degree ?? ''}</small></h4>
+            {degree.skills?.length > 0 &&
+                <hr>}
+            {degree.skills?.map((skill, index) => {
+              return (
+                  <p>{skill}</p>
+              )
+            })}
+          </article>
+      )
+    })}
+  </article>
 </section>
 
 <style>
     .container
     {
         display: flex;
-        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: center; /* Centre les éléments de la dernière ligne en cas de nombre impair */
     }
 
-    .card {
-        flex: 50%;
-        padding: 0 10px;
-    }
-
-    .educ-bloc
-    {
-        width:90%;
-        text-align:center;
-        //padding:30px;
+    .educ-bloc {
+        flex: 0 1 calc(50% - 20px); /* Block size at 50% minus a small margin */
+        max-width: calc(50% - 10px); /* Ensures that two blocks are side by side */
+        text-align: center;
         background: var(--accent-text-over);
-        //border-radius:5px;
-        //border:1px solid #ccc;
-        margin: 0 10px;
-        //box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-
         border: 1px solid var(--gray-800);
         border-radius: 0.75rem;
         padding: 1.5rem;
-        background-color: var(--gray-999_40);
         box-shadow: var(--shadow-sm);
+        margin: 10px 10px; /* Margin to create spacing, 10px on each side (= 20px small margin redux at flex attribute) */
     }
 
     .educ-bloc h5 {
@@ -83,7 +81,7 @@ const cards = [
     }
 
     .educ-bloc span {
-        font-size:35px;
+        font-size: 35px;
     }
 
     .educ-bloc h3 {
