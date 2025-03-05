@@ -1,0 +1,107 @@
+---
+// src/components/CookieBanner.astro
+---
+
+<div id="cookie-banner" class="cookie-banner hidden">
+  <div class="cookie-banner-content">
+    <p>
+      I use anonymous analytics to improve your experience.
+      <a href="/privacy-policy">Learn more</a>
+    </p>
+    <button
+        id="close-cookie-banner"
+        aria-label="Close notice"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<style>
+    .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #1a1a1a;
+        color: white;
+        padding: 1rem;
+        z-index: 9999;
+    }
+
+    .cookie-banner.hidden {
+        display: none;
+    }
+
+    .cookie-banner-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cookie-banner p {
+        margin: 0;
+        font-size: 0.875rem;
+    }
+
+    .cookie-banner a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    .cookie-banner a:hover {
+        color: #ccc;
+    }
+
+    .cookie-banner button {
+        background: none;
+        border: none;
+        color: white;
+        padding: 0.25rem;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cookie-banner button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .cookie-banner-content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .cookie-banner button {
+            align-self: flex-end;
+        }
+    }
+</style>
+
+<script>
+  console.log('Informative analytics banner script loaded')
+  const isBannerDismissed = localStorage.getItem('cookieBannerDismissed');
+  const banner = document.getElementById('cookie-banner');
+
+  if (!isBannerDismissed && banner) {
+    banner.classList.remove('hidden');
+  }
+
+  const closeButton = document.getElementById('close-cookie-banner');
+  if (closeButton) {
+    closeButton.addEventListener('click', () => {
+      banner?.classList.add('hidden');
+      localStorage.setItem('cookieBannerDismissed', 'true');
+    });
+  }
+</script>
