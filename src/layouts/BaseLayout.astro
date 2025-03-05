@@ -6,6 +6,7 @@
 import MainHead from '../components/base-layout/MainHead.astro';
 import Nav from '../components/base-layout/Nav.astro';
 import Footer from '../components/base-layout/Footer.astro';
+import AnalyticsBanner from '../components/elements/AnalyticsBanner.astro';
 
 interface Props {
 	title?: string | undefined;
@@ -24,6 +25,7 @@ const { title, description } = Astro.props;
 			<Nav />
 			<slot />
 			<Footer />
+			<AnalyticsBanner />
 		</div>
 
 		<script>
