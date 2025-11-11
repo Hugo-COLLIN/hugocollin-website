@@ -1,5 +1,5 @@
 ---
-title: "🚀 Save my Chatbot (aka Save my Phind)"
+title: "🚀 Save my Chatbot"
 publishDate: 2023-03-15 00:00:00
 featured: 2
 visible: true
