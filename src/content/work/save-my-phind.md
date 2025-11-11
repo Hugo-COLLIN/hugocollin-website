@@ -1,12 +1,12 @@
 ---
-title: "🚀 Save my Chatbot (aka Save my Phind)"
+title: "🚀 Save my Chatbot"
 publishDate: 2023-03-15 00:00:00
 featured: 2
 visible: true
 img: /assets/work/Gif2_SaveMyPhind.gif
 img_alt: Save my Chatbot extension
 description: |
-  🤖 A browser extension that allows you to export your Phind and Perplexity threads into markdown files.
+  🤖 A browser extension that allows you to export your chatbot threads into markdown files.
 tags:
   - Browser Extension
   - JavaScript
@@ -60,6 +60,3 @@ I'm really excited to see how users will benefit from this extension.
 #### Download Save my Chatbot:
 - [⏩ On Chromium browsers (Chrome, Edge, Opera, Brave, etc.)](https://chrome.google.com/webstore/detail/agklnagmfeooogcppjccdnoallkhgkod)
 - [⏩ On Firefox](https://addons.mozilla.org/fr/firefox/addon/save-my-phind)
-
-
-[//]: # (##### Visit the extension page: [Save my Chatbot on Chrome Web Store]&#40;https://chrome.google.com/webstore/detail/agklnagmfeooogcppjccdnoallkhgkod&#41;)
