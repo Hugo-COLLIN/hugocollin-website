@@ -4,7 +4,7 @@
 export const personalInfo = {
   firstname: "Hugo",
   lastname: "COLLIN",
-  tagline: "💻 I am a creative developer based in France, passionate by design, knowledge management and writing!",
+  tagline: "🧠 I am a software product designer based in France, passionate by reading, innovation and editing!",
   so: {
     linkedin: "https://www.linkedin.com/in/hugocollin/",
     github: "https://github.com/Hugo-COLLIN",
